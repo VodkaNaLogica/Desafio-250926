@@ -6,10 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://0l56jt3gsr0v" path="res://hud.tscn" id="4_1bvp3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
-size = Vector2(228, 497.5)
+size = Vector2(29, 497.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
-size = Vector2(1683.5, 129)
+size = Vector2(1683.5, 128)
 
 [node name="Node2D" type="Node2D" unique_id=379288749]
 
@@ -26,7 +26,7 @@ position_smoothing_enabled = true
 [node name="Area2D" type="Area2D" parent="StaticBody2D" unique_id=1228336360]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D/Area2D" unique_id=1556353345]
-position = Vector2(294, 398)
+position = Vector2(293.5, 398)
 shape = SubResource("RectangleShape2D_h2yge")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/Area2D" unique_id=1351603212]
@@ -36,7 +36,7 @@ scale = Vector2(1.75, 3.8359375)
 texture = ExtResource("1_0xm2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1312711389]
-position = Vector2(777.75, 706.5)
+position = Vector2(777.75, 707)
 shape = SubResource("RectangleShape2D_0xm2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=936082160]
