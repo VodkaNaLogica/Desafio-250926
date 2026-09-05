@@ -5,9 +5,7 @@ const JUMP_FORCE = -400.0
 
 var contador: int = 0
 
-@onready var hud1 = $"../CanvasLayer/Control/Panel/Label"
-
-@onready var hud2 = $"../CanvasLayer/HUD"
+@onready var hud = $"../CanvasLayer/HUD"
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -26,6 +24,11 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body == self:
-		contador += 1
-		hud1.text = (str(contador) + "/" + str(contador))
-		Hud.text = "oi"
+		var limite = 2
+		if contador > limite-1:
+			if contador == limite:
+				global_scale = 1.5 * global_scale
+				contador+=1
+		else:
+			contador += 1
+			hud.atualizarLabel(str(contador) + "/" + str(limite))
