@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://tkvbrrksgq5m"]
+
+[ext_resource type="Texture2D" uid="uid://cvq8t6gfns3r7" path="res://icon.svg" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://bf2yqehpf4hpx" path="res://Player/player.tscn" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://qulen2br1ari" path="res://canvas_layer.gd" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://0l56jt3gsr0v" path="res://hud.tscn" id="4_1bvp3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(228, 497.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(1683.5, 129)
+
+[node name="Node2D" type="Node2D" unique_id=379288749]
+
+[node name="Player" parent="." unique_id=1366942499 instance=ExtResource("2_h2yge")]
+position = Vector2(1028, 398)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1178613666]
+zoom = Vector2(0.8, 0.8)
+limit_bottom = 771
+position_smoothing_enabled = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1878729972]
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D" unique_id=1228336360]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D/Area2D" unique_id=1556353345]
+position = Vector2(294, 398)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/Area2D" unique_id=1351603212]
+z_index = 1
+position = Vector2(293, 397.5)
+scale = Vector2(1.75, 3.8359375)
+texture = ExtResource("1_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1312711389]
+position = Vector2(777.75, 706.5)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=936082160]
+position = Vector2(777, 707)
+scale = Vector2(13.140625, 1)
+texture = ExtResource("1_0xm2m")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1993019920]
+visible = false
+script = ExtResource("3_h2yge")
+
+[node name="HUD" parent="CanvasLayer" unique_id=1617152066 instance=ExtResource("4_1bvp3")]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1693962513]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=483491979]
+visible = false
+layout_mode = 0
+offset_right = 294.0
+offset_bottom = 81.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel" unique_id=1861943096]
+visible = false
+layout_mode = 0
+offset_right = 294.0
+offset_bottom = 81.0
+theme_override_font_sizes/font_size = 56
+text = "XX/XX"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="StaticBody2D/Area2D" to="Player" method="_on_area_2d_body_entered"]
