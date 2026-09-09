@@ -11,14 +11,9 @@ config_version=5
 [application]
 
 config/name="Desafio-250926"
-run/main_scene="uid://tkvbrrksgq5m"
+run/main_scene="uid://c02ebsy76pr1i"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
-
-[autoload]
-
-Player="*uid://px5xojn6pvgk"
-Hud="*uid://cr3xhsu0btw4i"
 
 [display]
 
