@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbh4r1qkq27f8"
-path="res://.godot/imported/InternalFloor.png-f3583a7b750e2069b184893ce7cb1a34.ctex"
+uid="uid://bofwi7qinq8wg"
+path="res://.godot/imported/InternalFloorTactilePaving.png-45a3887162b03f172845194b836bb850.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/InternalFloor.png"
-dest_files=["res://.godot/imported/InternalFloor.png-f3583a7b750e2069b184893ce7cb1a34.ctex"]
+source_file="res://Assets/InternalFloorTactilePaving.png"
+dest_files=["res://.godot/imported/InternalFloorTactilePaving.png-45a3887162b03f172845194b836bb850.ctex"]
 
 [params]
 
